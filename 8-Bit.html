@@ -1,0 +1,424 @@
+<!doctype html>
+
+  <head>
+
+    <title>8-Bit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+  .row
+  {
+    margin-left: 70px;
+  }
+  #slide{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  #disable{
+    color: gray;
+  }
+  #footer
+  {
+   background-color:rgb(255, 250, 240); 
+   width: 100%;
+    min-height: 50vh;
+    display: flex
+  }
+</style>
+<link rel="stylesheet" href="script.js">
+  </head>
+  <body>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+
+      //Initialize your slider in your script file
+    </script>
+
+
+<!-- NAVIGARTION BAR START -->
+      <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid">
+            <!-- Logo -->
+                <a class="navbar-brand" href="logo.jpg">
+                  <img src="logo.jpg" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
+                 
+                </a>
+    <!-- button for small devices -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- FOR RESPONSIVENESS -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- HOME BUTTON -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="8-Bit.html">Home</a>
+                <!-- link -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="card.html">Link</a>
+              </li>
+              <!-- dropdrow -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester
+                </a>
+                <ul class="dropdown-menu " >
+                  <li><a class="dropdown-item disabled"href="#">semester 1</a></li>
+                  <li><a class="dropdown-item disabled"href="#">semester 2</a></li>
+                  <li><a class="dropdown-item disabled"href="#">semester 3</a></li>
+                  <li><a class="dropdown-item disabled" href="#">semester 4</a></li>                  
+                  <li><a class="dropdown-item disabled" href="#">semester 5</a></li>
+                  <li><a class="dropdown-item disabled" href="#">semester 6</a></li>
+                  <li><a class="dropdown-item disabled" href="#">semester 7</a></li>
+                  <li><a class="dropdown-item disabled" href="#">semester 8</a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item"id="disable" href="#">none of your concern</a></li>
+                </ul>
+              </li>
+
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-danger" type="submit">Search</button>
+            </form>
+            <br><hr>
+            <!-- login and signup buttons -->
+            <div class="mx-2 ">
+              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginmodal">login
+              </button>
+
+
+              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupmodal">Signup
+              </button>
+
+            
+  
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+<!-- login Modal -->
+<div class="modal fade" id="loginmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginmodalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginmodalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- signup form     -->
+      <form class="px-4 py-3">
+        <div class="mb-3">
+          <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+            <label class="form-check-label" for="dropdownCheck">
+              Remember me
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">login in</button>
+      </form>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">New around here? Sign up</a>
+      <a class="dropdown-item" href="#">Forgot password?</a>
+    
+    <!-- form End -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- signup Modal -->
+<div class="modal fade  " id="signupmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signupmodalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupmodalLabel">SignUp</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <!-- signup form     -->
+      <form class="px-4 py-3">
+        <div class="mb-3">
+          <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+        </div>
+        <label for="exampleDropdownFormEmail1" class="form-label">confirm email</label>
+        <input type="email" class="form-control" id="exampleDropdownFormEmail2"placeholder="comfirm">
+      </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+            <label class="form-check-label" for="dropdownCheck">
+              Remember me
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">New around here? Sign up</a>
+      <a class="dropdown-item" href="#">Forgot password?</a>
+    
+    <!-- form End -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- NAVIGATION BAR END here   -->
+    <!-- SLIDES START -->
+    <br> <hr>
+    <div  class="container ">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="img-fluid"  src="slide33.jpg" class="d-block w-100"   alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>8-Bit</h5>
+              <p id="slide">"It's never too late to be what you might've been”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img-fluid" src="slide2.jpg" class="d-block w-100"  alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>8-Bit</h5>
+              <p>"Trust yourself that you can do it and get it"</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img-fluid" src="slide3.jpg" class="d-block w-100"  alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>8-Bit</h5>
+              <p>"if people are doubting how far you can go,go so far you can't hear them any more</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SLIDE STOP here -->
+    <br> <hr><br>
+     <!-- CARDS START -->
+     <!-- row1-->
+     
+<!-- CARD 1 -->
+    <div class="row">
+      
+      <div class="col">
+          <div class="container text-center">
+              <div class="card border-primary mb-3" style="width: 18rem;">
+               <img src="card.web.jpg" class="card-img-top img-fluid" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">Web Development</h5>
+                 <p class="card-text">
+                   <ul>
+                     LEACTURE AND NOTES FOR
+                     html, ,css,bootstrap,java 
+                   </ul>
+                 </p>
+                 <a href="#" class="btn btn-outline-success">click here to learn</a>
+               </div>
+                </div>
+        
+            </div>
+      </div>
+      <!-- CARD 2 -->
+      <div class=" col">
+          <div class="container text-center">
+              <div class="card border-danger mb-3" style="width: 18rem;">
+               <img src="card.electrical.jpg" class="card-img-top img-fluid" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">Electrical science 1</h5>
+                 <p class="card-text">
+                   <ul>
+                     Leacture and Notes 
+                   </ul>
+                 </p>
+                 <a href="#" class="btn btn-outline-success">click here to learn</a>
+               </div>
+                </div>
+        
+            </div>
+      </div>
+    <!-- CARD 3 -->
+      <div class="col">
+          <div class="container text-center">
+              <div class="card border-primary mb-3" style="width: 18rem;">
+               <img src="card.electrical2.jpg" class="card-img-top img-fluid" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">Electrical Science 2</h5>
+                 <p class="card-text">
+                   <ul>
+                   Leacture and Notes
+                    
+                   </ul>
+                 </p>
+                 <a href="#" class="btn btn-outline-success">click here to learn</a>
+               </div>
+                </div>
+        
+            </div>
+      </div>
+      <!-- row2 -->
+   <!-- <br> -->
+<!-- CARD 1 -->
+<!-- <div class="row"> -->
+      
+  <div class="col">
+      <div class="container text-center">
+          <div class="card border-danger mb-3" style="width: 18rem;">
+           <img src="https://source.unsplash.com/500x400?webpage" class="card-img-top img-fluid" alt="...">
+           <div class="card-body">
+             <h5 class="card-title">Web Development</h5>
+             <p class="card-text">
+               <ul>
+                 LEACTURE AND NOTES FOR
+                 html, ,css,bootstrap,java 
+               </ul>
+             </p>
+             <a href="#" class="btn btn-outline-success">click here to learn</a>
+           </div>
+            </div>
+    
+        </div>
+  </div>
+  <!-- CARD 2 -->
+  <div class="col">
+      <div class="container text-center">
+          <div class="card border-primary mb-3" style="width: 18rem;">
+           <img src="https://source.unsplash.com/500x400?bootstrap" class="card-img-top img-fluid" alt="...">
+           <div class="card-body">
+             <h5 class="card-title">Web Development</h5>
+             <p class="card-text">
+               <ul>
+                 LEACTURE AND NOTES FOR
+                 html, ,css,bootstrap,java 
+               </ul>
+             </p>
+             <a href="#" class="btn btn-outline-success">click here to learn</a>
+           </div>
+            </div>
+    
+        </div>
+  </div>
+<!-- CARD 3 -->
+  <div class="col">
+      <div class="container text-center">
+          <div class="card border-danger mb-3" style="width: 18rem;">
+           <img src="https://source.unsplash.com/500x400?webpage" class="card-img-top img-fluid" alt="...">
+           <div class="card-body">
+             <h5 class="card-title">Web Development</h5>
+             <p class="card-text">
+               <ul>
+                 LEACTURE AND NOTES FOR
+                 html, ,css,bootstrap,java 
+               </ul>
+             </p>
+             <a href="#" class="btn btn-outline-success">click here to learn</a>
+           </div>
+            </div>
+    
+        </div>
+  </div>
+</div>
+
+<!-- webpage footer -->
+<br><br><br><hr><hr><br>
+
+
+<div class=" container-fluid " id="footer" >
+  <br><br>
+  <div class="row">
+    <div class="col-lg-3 mb-3">
+
+      <ul class="list-unstyled small text-muted">
+          <a  href="8-Bit.html">
+              <img src="logo.jpg" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
+             
+            </a>
+        <li class="mb-2">Designed and built with all the love in the world by the <a href="#">our team</a> with the help of <a href="#">our contributors</a>.</li>
+
+      </ul>
+    </div>
+
+    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+      <h5>Links</h5>
+      <ul class="list-unstyled">
+        <li class="mb-2"><a href="8-Bit.html">Home</a></li>
+        <li class="mb-2"><a href="#">links</a></li>
+        <li class="mb-2"><a href="#">socialmedia</a></li>
+
+      </ul>
+    </div>
+    <div class="col-6 col-lg-2 mb-3">
+      <h5>Guides</h5>
+      <ul class="list-unstyled">
+        <li class="mb-2"><a href="https://www.programmingbasics.org/en/beginner/gettingstarted.html">Getting started</a></li>
+
+      </ul>
+    </div>
+
+    <div class="col-6 col-lg-2 mb-3">
+      <h5>Community</h5>
+      <ul class="list-unstyled">
+        <li class="mb-2"><a href="#">Issues</a></li>
+        <li class="mb-2"><a href="#">Discussions</a></li>
+        <li class="mb-2"><a href="#">Stack Overflow</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-lg-2 mb-3 ">
+      <h5>PADNE KA MAN
+          <br> NAHI HA</h5>
+      <ul class="list-unstyled">
+        <li class="mb-2"><a href="https://zoro.to/">Anime</a></li>
+        <li class="mb-2"><a href="https://www.youtube.com/">YOUTUBE </a></li>
+        <li class="mb-2"><a href="https://en.wikipedia.org/wiki/Sleep">SO jao</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+
+  </body>
+</html>
